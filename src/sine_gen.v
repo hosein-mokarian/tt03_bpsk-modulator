@@ -34,6 +34,6 @@ module sine_gen
 					index <= index + 1;		
 	end
 	
-	assign out = (rstn & en) ? rom_memory[index] : 8'hz;
+	assign out = (rstn & en) ? rom_memory[index] : 8'h0;
 
 endmodule
