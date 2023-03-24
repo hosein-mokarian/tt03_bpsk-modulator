@@ -26,19 +26,18 @@ documentation:
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
       This is a BPSK modulator. It uses a LUT to generate a sine wave.
-      LUT consists of 64 samples with 8 bits depth. This is implemented as a ROM block.
+      The LUT consists of 64 samples with 8 bits depth. This is implemented as a ROM block.
 
-      Inputs consists of clk, rstn, en and d. The period of the output signal is equal to 64 * TCLK.
-      TCLK is period of input clock.
+      Inputs consist of clk, rstn, en and d.
 
       The output is a 8 bit digital data.
       This should be connected to a DAC to generate an analogue sine wave.
+      The period of the output signal is equal to 64 * TCLK. TCLK is period of input clock.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      The test process is based on test.py file.
-      The important thing is the period of input data.
-      It should be 1 or 0 for a period of output signal.
+      The test procedure is based on test.py file.
+      Note: The input data (d) should be 1 or 0 at least a period of the output signal.
 
 # A description of what the inputs do
   inputs:               
