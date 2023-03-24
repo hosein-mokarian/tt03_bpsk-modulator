@@ -21,15 +21,24 @@ documentation:
   author:       "Hosein Mokarian"      # Your name
   title:        "BPSK Modulator"      # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  ""      # Short description of what your project does
+  description:  "All digital BPSK modulator based on a LUT sine wave generation"      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Explain how your project works
+      This is a BPSK modulator. It uses a LUT to generate a sine wave.
+      LUT consists of 64 samples with 8 bits depth. This is implemented as a ROM block.
+
+      Inputs consists of clk, rstn, en and d. The period of the output signal is equal to 64 * TCLK.
+      TCLK is period of input clock.
+
+      The output is a 8 bit digital data.
+      This should be connected to a DAC to generate an analogue sine wave.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
+      The test process is based on test.py file.
+      The important thing is the period of input data.
+      It should be 1 or 0 for a period of output signal.
 
 # A description of what the inputs do
   inputs:               
